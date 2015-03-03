@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-RUN apt-get update && apt-get install -y ansible avahi-daemon avahi-utils
+RUN apt-get update && apt-get install -y ansible ssh avahi-daemon avahi-utils
 
 RUN sed -i -e "s@#enable-dbus=yes@enable-dbus=no@" /etc/avahi/avahi-daemon.conf
 
